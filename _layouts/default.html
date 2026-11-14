@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
+    <!-- ШАПКА ВЕРНУЛАСЬ НА МЕСТО -->
     <div class="container-lg px-3 my-5 markdown-body">
-      <!-- УБРАНА ССЫЛКА НА GITHUB -->
+      <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+      <p>{{ site.description }}</p>
       
+      <!-- ССЫЛКА НА GITHUB УДАЛЕНА -->
+
       {{ content }}
-      
-      <!-- УБРАН СТАНДАРТНЫЙ ФУТЕР -->
     </div>
     
     <!-- ТВОЙ КАСТОМНЫЙ ФУТЕР -->
