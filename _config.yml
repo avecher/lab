@@ -1,5 +1,7 @@
 title: ОБРеЗКи
 description: Режиссёрская трансмедиа лаборатория Андрея Вечера.
-baseurl: "" # оставь пустым, если это username.github.io
+baseurl: "" 
 url: "https://lab.avecher.ru"
-theme: minimal 
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
