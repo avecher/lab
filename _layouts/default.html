@@ -5,39 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
 </head>
 <body>
-  <div class="editor-layout">
-    <!-- САЙДБАР -->
-    <aside class="sidebar">
-      <h2>Explorer</h2>
-      <div class="file-tree">
-        <div class="folder">📁 episodes</div>
-        {% for post in site.posts %}
-          <a href="{{ post.url }}" {% if page.url == post.url %}class="active"{% endif %}>
-            &nbsp;&nbsp;📄 {{ post.title }}
-          </a>
-        {% endfor %}
-        <div style="margin-top: 1rem;">
-          <a href="/" {% if page.url == '/' %}class="active"{% endif %}>📄 manifesto.md</a>
-        </div>
-      </div>
-    </aside>
+  <div class="container">
+    <!-- НАВИГАЦИЯ -->
+    <nav>
+      <a href="/">Принципы</a>
+      <a href="/process/">Процесс</a>
+      <a href="/tasks/">Задачи</a>
+      <a href="/drafts/">Черновики</a>
+      <a href="/contact/">Контакт</a>
+    </nav>
 
-    <!-- КОНТЕНТ -->
-    <main class="main-content">
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main>
       {{ content }}
     </main>
-  </div>
 
-  <!-- СТРОКА СОСТОЯНИЯ -->
-  <footer class="status-bar">
-    <span>© 2026 Андрей Вечер | Практика</span>
-    <span>UTF-8 | Ln {{ page.line_count | default: 42 }}, Col 1</span>
-  </footer>
+    <!-- ФУТЕР -->
+    <footer style="margin-top: 6rem; padding-top: 2rem; border-top: 1px solid var(--line-color); font-size: 0.8rem; color: #666;">
+      <p>© 2026 Режиссёрская трансмедиа лаборатория Андрея Вечера.</p>
+      <p class="handwritten">Честность важнее красоты. Процесс важнее результата.</p>
+    </footer>
+  </div>
 </body>
 </html>
