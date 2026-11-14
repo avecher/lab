@@ -1,10 +1,22 @@
 ---
 layout: default
-title: Главная
+title: manifesto.md
 ---
 
-## Хроника
+# // Манифест лаборатории ОБРеЗКи
 
-{% for post in site.posts %}
-* [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%d.%m.%Y" }}
-{% endfor %}
+<span class="comment">// Режиссёрская трансмедиа лаборатория Андрея Вечера.</span>
+<span class="comment">// Хронология: 1996–2026</span>
+
+function processOverResult() {
+  return "Честность важнее красоты";
+}
+
+const project = {
+  name: "Здесь был Буратино",
+  episodes: 8,
+  status: "in_progress"
+};
+
+// Процесс важнее результата.
+// Авторство — путь к самому себе.
