@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <!-- УБРАНА ССЫЛКА НА GITHUB -->
+      
+      {{ content }}
+      
+      <!-- УБРАН СТАНДАРТНЫЙ ФУТЕР -->
+    </div>
+    
+    <!-- ТВОЙ КАСТОМНЫЙ ФУТЕР -->
+    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #eaecef; color: #6a737d;">
+      <p>© 2026 Режиссёрская трансмедиа лаборатория Андрея Вечера.</p>
+      <p>Честность важнее красоты. Процесс важнее результата.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
