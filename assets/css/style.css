@@ -1,0 +1,77 @@
+/* СБРОС И БАЗА */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+  background: #1e1e1e; 
+  color: #d4d4d4; 
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace; 
+  font-size: 14px; 
+  line-height: 1.6; 
+  height: 100vh; 
+  overflow: hidden; 
+}
+
+/* СЕТКА РЕДАКТОРА */
+.editor-layout { display: flex; height: 100%; }
+
+/* САЙДБАР (ДЕРЕВО ФАЙЛОВ) */
+.sidebar { 
+  width: 240px; 
+  background: #252526; 
+  border-right: 1px solid #3c3c3c; 
+  padding: 1rem; 
+  overflow-y: auto; 
+  flex-shrink: 0; 
+}
+.sidebar h2 { 
+  font-size: 11px; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  color: #858585; 
+  margin-bottom: 1rem; 
+}
+.file-tree a { 
+  display: block; 
+  color: #cccccc; 
+  text-decoration: none; 
+  padding: 4px 0; 
+  font-size: 13px; 
+}
+.file-tree a:hover, .file-tree a.active { color: #ffffff; }
+.file-tree .folder { color: #79b8ff; margin-top: 0.5rem; }
+
+/* ОСНОВНАЯ ОБЛАСТЬ */
+.main-content { 
+  flex-grow: 1; 
+  padding: 2rem; 
+  overflow-y: auto; 
+  max-width: 900px; 
+}
+.main-content h1 { 
+  color: #569cd6; 
+  font-size: 1.5rem; 
+  margin-bottom: 1rem; 
+  font-weight: normal; 
+}
+.main-content p { margin-bottom: 1rem; color: #ce9178; } /* Строки кода - оранжевый акцент */
+.main-content .comment { color: #6a9955; } /* Даты как комментарии */
+
+/* ФУТЕР (СТРОКА СОСТОЯНИЯ) */
+.status-bar { 
+  position: fixed; 
+  bottom: 0; 
+  left: 240px; 
+  right: 0; 
+  background: #007acc; 
+  color: white; 
+  padding: 4px 1rem; 
+  font-size: 12px; 
+  display: flex; 
+  justify-content: space-between; 
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+  .editor-layout { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid #3c3c3c; }
+  .status-bar { left: 0; }
+}
