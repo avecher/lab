@@ -7,7 +7,23 @@
     <title>{{ page.title | default: site.title }}</title>
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    
+ 
+    <style>
+  /* Сдвигаем весь контент вправо на десктопе */
+  @media (min-width: 768px) {
+    .markdown-body {
+      padding-left: 4rem !important; /* Увеличь число, если нужно еще правее */
+      max-width: 900px; /* Ограничиваем ширину, чтобы текст не растягивался бесконечно */
+    }
+  }
+  
+  /* На мобильных оставляем как есть или делаем меньше */
+  @media (max-width: 767px) {
+    .markdown-body {
+      padding-left: 1.5rem !important;
+    }
+  }
+</style>
     <!-- ДОБАВЛЯЕМ МИНИМАЛЬНЫЙ CSS ДЛЯ СЕТКИ, ЕСЛИ ТЕМА НЕ ПОДХВАТЫВАЕТ -->
     <style>
       .site-layout { display: flex; flex-direction: column; }
