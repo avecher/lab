@@ -4,8 +4,8 @@
   --text-color: #1a1a1a;     /* Глубокий черный */
   --accent-color: #8b3a3a;   /* Терракотовый/кирпичный для акцентов */
   --line-color: #e0e0e0;     /* Светло-серые линии сетки */
-  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* ДОБАВЛЕНО */
+  --font-mono: 'Cutive Mono', 'Courier New', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* ДОБАВЛЕНО */
 }
 
 body {
