@@ -16,7 +16,14 @@
       <a href="/drafts/">Черновики</a>
       <a href="/contact/">Контакт</a>
     </nav>
-
+<nav>
+  <a href="/">Манифест</a>
+  {% assign latest_post = site.posts.first %}
+  {% if latest_post %}
+    <a href="{{ latest_post.url }}">Последний: {{ latest_post.title }}</a>
+  {% endif %}
+  <a href="/archive/">Все эпизоды</a>
+</nav>
     <!-- ОСНОВНОЙ КОНТЕНТ -->
     <main>
       {{ content }}
