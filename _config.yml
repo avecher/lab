@@ -1,1 +1,5 @@
-theme: minimal
+title: ОБРеЗКи
+description: Режиссёрская трансмедиа лаборатория Андрея Вечера.
+baseurl: "" # оставь пустым, если это username.github.io
+url: "https://lab.avecher.ru"
+theme: minimal 
