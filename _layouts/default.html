@@ -9,21 +9,31 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
-    <!-- ШАПКА ВЕРНУЛАСЬ НА МЕСТО -->
+    <!-- РОДНАЯ СЕТКА MINIMAL -->
     <div class="container-lg px-3 my-5 markdown-body">
-      <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
-      <p>{{ site.description }}</p>
-      
-      <!-- ССЫЛКА НА GITHUB УДАЛЕНА -->
+      <div class="d-flex flex-column flex-md-row">
+        
+        <!-- ЛЕВАЯ КОЛОНКА (ШАПКА + ФУТЕР) -->
+        <div class="flex-shrink-0 mr-3 mb-4 mb-md-0" style="width: 220px;">
+          <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+          <p>{{ site.description }}</p>
+          
+          <!-- ССЫЛКА НА GITHUB УДАЛЕНА ЦЕЛИКОМ -->
+          
+          <!-- КАСТОМНЫЙ ФУТЕР В ЛЕВОЙ КОЛОНКЕ -->
+          <footer style="margin-top: 3rem; font-size: 0.85em; color: #6a737d;">
+            <p>© 2026 Андрей Вечер</p>
+            <p>Честность важнее красоты.</p>
+          </footer>
+        </div>
 
-      {{ content }}
+        <!-- ПРАВАЯ КОЛОНКА (КОНТЕНТ) -->
+        <div class="flex-grow-1 ml-md-3">
+          {{ content }}
+        </div>
+        
+      </div>
     </div>
-    
-    <!-- ТВОЙ КАСТОМНЫЙ ФУТЕР -->
-    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #eaecef; color: #6a737d;">
-      <p>© 2026 Режиссёрская трансмедиа лаборатория Андрея Вечера.</p>
-      <p>Честность важнее красоты. Процесс важнее результата.</p>
-    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
     <script>anchors.add();</script>
