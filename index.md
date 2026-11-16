@@ -5,7 +5,7 @@ title: ЧерноВики
 
 <span class="meta-label">// Режиссёрский блокнот</span>
 
-# <span class=«strikethrough» > ЧерноВики </span>
+ <span class=«strikethrough» > # ЧерноВики </span>
 > Направление. «Кино как сборка субъективной реальности» — рабочее название подхода, а не <span class="strikethrough">новый научный термин</span>.
 
 > <!--> это не разовая консультация и не формат <span class="strikethrough">«сделал — предъявил»</span> <span class="arrow-link">→</span> настоящее.<br>—>
