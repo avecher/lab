@@ -1,11 +1,13 @@
-/* БАЗА И ТИПОГРАФИКА */
+/* =========================================
+   БАЗА И ТИПОГРАФИКА
+   ========================================= */
 :root {
   --bg-color: #fcfcfc;       /* Почти белый, мягкий для глаз */
   --text-color: #1a1a1a;     /* Глубокий черный */
   --accent-color: #8b3a3a;   /* Терракотовый/кирпичный для акцентов */
   --line-color: #e0e0e0;     /* Светло-серые линии сетки */
   --font-mono: 'Cutive Mono', 'Courier New', monospace;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* ДОБАВЛЕНО */
+  --font-cursive: 'Caveat', 'Segoe Script', 'Bradley Hand', cursive; /* Для рукописных пометок */
 }
 
 body {
@@ -17,19 +19,20 @@ body {
   padding: 0;
   /* Фоновая сетка (линовка) */
   background-image: linear-gradient(var(--line-color) 1px, transparent 1px);
-  background-size: 100% 2rem; /* Шаг линовки */
+  background-size: 100% 2rem; 
   background-position: 0 1rem;
 }
 
-/* КОНТЕЙНЕР */
+/* =========================================
+   КОНТЕЙНЕР И НАВИГАЦИЯ
+   ========================================= */
 .container {
   max-width: 760px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
-  background: rgba(252, 252, 252, 0.9); /* Полупрозрачный фон поверх линий */
+  background: rgba(252, 252, 252, 0.92); /* Чуть плотнее, чтобы текст читался лучше */
 }
 
-/* НАВИГАЦИЯ */
 nav {
   display: flex;
   gap: 1.5rem;
@@ -40,7 +43,6 @@ nav {
 nav a {
   text-decoration: none;
   color: var(--text-color);
-  font-family: var(--font-mono);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -50,9 +52,10 @@ nav a:hover {
   border-bottom-style: solid;
 }
 
-/* ЗАГОЛОВКИ И МЕТА-ДАННЫЕ */
+/* =========================================
+   ЗАГОЛОВКИ И МЕТА-ДАННЫЕ
+   ========================================= */
 .meta-label {
-  font-family: var(--font-mono);
   color: var(--accent-color);
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -71,13 +74,45 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  margin-top: 4rem;
+  margin-top: 4rem; /* Большой отступ для разделения смысловых блоков */
   margin-bottom: 1.5rem;
   border-bottom: 1px dashed var(--line-color);
   padding-bottom: 0.5rem;
 }
 
-/* ЦИТАТЫ / АКЦЕНТНЫЕ БЛОКИ */
+h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================================
+   ТЕКСТОВЫЕ ЭЛЕМЕНТЫ (Ссылки, Списки, Цитаты)
+   ========================================= */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent-color);
+  transition: border-color 0.2s;
+}
+a:hover {
+  border-bottom-style: solid;
+}
+
+/* Доступность: фокус для клавиатуры */
+a:focus, button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+ul, ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
 blockquote {
   border-left: 2px solid var(--accent-color);
   margin: 2rem 0;
@@ -86,7 +121,30 @@ blockquote {
   color: #444;
 }
 
-/* КАРТОЧКИ ПРИНЦИПОВ (БЛОКИ КОДА) */
+hr {
+  border: none;
+  border-top: 1px dashed var(--line-color);
+  margin: 3rem 0;
+}
+
+code {
+  font-family: var(--font-mono);
+  background: #f0f0f0;
+  padding: 0.15rem 0.3rem;
+  font-size: 0.9em;
+  border-radius: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border: 1px solid var(--line-color);
+}
+
+/* =========================================
+   КАРТОЧКИ ПРИНЦИПОВ
+   ========================================= */
 .principle-card {
   border: 1px solid var(--line-color);
   padding: 2rem;
@@ -96,48 +154,75 @@ blockquote {
 }
 
 .principle-card::before {
-  content: attr(data-number); /* Берет номер из HTML */
+  content: attr(data-number); 
   position: absolute;
   top: -0.8rem;
   left: 1rem;
   background: var(--bg-color);
   padding: 0 0.5rem;
-  font-family: var(--font-mono);
   color: var(--accent-color);
   font-size: 0.8rem;
 }
 
 .principle-card h3 {
   margin-top: 0;
-  font-size: 1.1rem;
-  text-transform: lowercase; /* Как на референсе */
+  text-transform: lowercase; 
 }
 
 .principle-card p {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   font-size: 0.95rem;
 }
+.principle-card p:last-child {
+  margin-bottom: 0;
+}
 
-/* СПЕЦИАЛЬНЫЕ ЭЛЕМЕНТЫ */
+/* =========================================
+   РЕЖИССЁРСКИЕ ПОМЕТКИ (Выноски)
+   ========================================= */
+.note {
+  border-left: 2px solid var(--line-color);
+  padding: 1rem 0 1rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.note.important {
+  border-left-color: var(--accent-color);
+}
+
+.note .meta-label {
+  margin-bottom: 0.75rem;
+}
+
+/* =========================================
+   СПЕЦИАЛЬНЫЕ ЭЛЕМЕНТЫ
+   ========================================= */
 .strikethrough {
   text-decoration: line-through;
   color: #999;
   margin-right: 0.5rem;
 }
+
 .arrow-link {
   color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
 }
+
 .handwritten {
-  font-family: 'Times New Roman', serif; /* Имитация рукописного/другого стиля */
+  font-family: var(--font-cursive);
   font-style: italic;
   color: var(--accent-color);
+  font-size: 1.15em;
+  letter-spacing: 0.02em;
 }
 
-/* АДАПТИВ */
+/* =========================================
+   АДАПТИВ
+   ========================================= */
 @media (max-width: 600px) {
   h1 { font-size: 1.8rem; }
   nav { flex-wrap: wrap; gap: 1rem; }
   .container { padding: 2rem 1rem; }
+  .principle-card { padding: 1.5rem; }
 }
