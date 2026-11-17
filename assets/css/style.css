@@ -322,3 +322,10 @@ img {
   margin-top: 0.5rem;
   font-size: 1.3rem;
 }
+/* ФИНАЛЬНАЯ МЕТКА В КОНЦЕ ДОКУМЕНТА */
+.doc-end {
+  display: block;
+  margin-top: 4rem;
+  text-align: center; /* Или left, как тебе больше нравится */
+  opacity: 0.7;
+}
