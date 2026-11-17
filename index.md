@@ -15,6 +15,20 @@ title: ЧерноВики
 
 <span class="handwritten">Концепция: фильм-подкаст. исходный код — на github. зритель — соавтор.</span>
 
+
+<!-- БЛОК ЛОКАЛЬНОЙ НАВИГАЦИИ (ЯКОРЯ) -->
+<nav class="local-nav">
+  <span class="local-nav-title">// содержание страницы</span>
+  <ul>
+    <li><a href="#manifest">01. Суть проекта</a></li>
+    <li><a href="#philosophy">02. Философия</a></li>
+    <li><a href="#structure">03. Структура</a></li>
+    <li><a href="#process">04. Процесс</a></li>
+    <li><a href="#versions">05. Версионность</a></li>
+    <li><a href="#viewer">06. Роль зрителя</a></li>
+  </ul>
+</nav>
+
 <hr>
 
 <div class="principle-card" data-number="// 01">
