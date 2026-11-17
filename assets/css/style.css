@@ -226,3 +226,99 @@ img {
   .container { padding: 2rem 1rem; }
   .principle-card { padding: 1.5rem; }
 }
+
+/* =========================================
+   1. ГЛОБАЛЬНАЯ НАВИГАЦИЯ (Путь к файлу)
+   ========================================= */
+.global-nav {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.global-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--line-color);
+  transition: all 0.2s ease;
+}
+
+.global-nav a:hover {
+  border-bottom-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.nav-separator {
+  color: var(--line-color);
+  user-select: none; /* Нельзя выделить, как настоящий разделитель */
+}
+
+/* =========================================
+   2. ЛОКАЛЬНАЯ НАВИГАЦИЯ (Якоря / Содержание)
+   ========================================= */
+.local-nav {
+  margin: 2rem 0 3rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px dashed var(--line-color);
+  background: rgba(255, 255, 255, 0.6); /* Полупрозрачный, чтобы видна была линовка */
+}
+
+.local-nav-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.local-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
+
+.local-nav a {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.local-nav a::before {
+  content: "→ ";
+  color: var(--accent-color);
+  opacity: 0.6;
+}
+
+.local-nav a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* =========================================
+   3. ФУТЕР (перенесено из инлайн-стилей)
+   ========================================= */
+.site-footer {
+  margin-top: 6rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line-color);
+  font-size: 0.8rem;
+  color: #666;
+  text-align: left;
+}
+
+.site-footer .handwritten {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}
