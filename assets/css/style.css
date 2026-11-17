@@ -194,6 +194,18 @@ img {
   margin-bottom: 0.75rem;
 }
 
+.note {
+  background-color: #fff9c4; /* Мягкий жёлтый, не кислотный */
+  border-left: 2px solid var(--accent-color);
+  padding: 1rem 0 1rem 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Метка остаётся без фона, чтобы был контраст */
+.note .meta-label {
+  background: transparent;
+}
+
 /* =========================================
    СПЕЦИАЛЬНЫЕ ЭЛЕМЕНТЫ
    ========================================= */
@@ -328,14 +340,4 @@ img {
   margin-top: 4rem;
   text-align: center; /* Или left, как тебе больше нравится */
   opacity: 0.7;
-}
-
-/* КУРСИВ ДЛЯ РЕЖИССЁРСКИХ ПОМЕТОК */
-.note {
-  font-style: italic;
-}
-
-/* Метка остаётся прямой — это важно для контраста */
-.note .meta-label {
-  font-style: normal;
 }
