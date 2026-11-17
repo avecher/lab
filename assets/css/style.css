@@ -329,3 +329,13 @@ img {
   text-align: center; /* Или left, как тебе больше нравится */
   opacity: 0.7;
 }
+
+/* КУРСИВ ДЛЯ РЕЖИССЁРСКИХ ПОМЕТОК */
+.note {
+  font-style: italic;
+}
+
+/* Метка остаётся прямой — это важно для контраста */
+.note .meta-label {
+  font-style: normal;
+}
