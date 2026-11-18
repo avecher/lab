@@ -18,18 +18,24 @@
   <div class="container">
     
     <!-- 1. ГЛОБАЛЬНАЯ НАВИГАЦИЯ (Дерево проекта) -->
-    <nav class="global-nav">
-      <a href="/" class="nav-home">root/</a>
-      <span class="nav-separator">/</span>
-      <a href="/archive/">архив_эпизодов</a>
-      
-      {% assign latest_post = site.posts.first %}
-      {% if latest_post %}
-        <span class="nav-separator">/</span>
-        <a href="{{ latest_post.url }}">последний: {{ latest_post.title | truncate: 25 }}</a>
-      {% endif %}
-    </nav>
+<nav class="global-nav">
+  <a href="/" class="nav-home">root/</a>
+  <span class="nav-separator">/</span>
+  
+  <!-- Ссылка на поток мыслей -->
+  <a href="/journal/">дневник_процесса</a>
+  
+  <span class="nav-separator">/</span>
+  
+  <!-- Ссылка на готовые релизы -->
+  <a href="/episodes/">эпизоды_фабулы</a>
 
+  {% assign latest_post = site.posts.first %}
+  {% if latest_post %}
+    <span class="nav-separator">/</span>
+    <a href="{{ latest_post.url }}">последний: {{ latest_post.title | truncate: 25 }}</a>
+  {% endif %}
+</nav>
     <!-- 2. ОСНОВНОЙ КОНТЕНТ -->
     <main>
       {{ content }}
